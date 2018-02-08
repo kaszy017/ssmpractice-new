@@ -16,6 +16,19 @@ public class Appointment {
     // 多对一的复合属性
     private Book book;// 图书实体
 
+    public Appointment() {
+    }
+    public Appointment(long bookId,long studentId,Date appointTime){
+        this.bookId = bookId;
+        this.studentId = studentId;
+        this.appointTime = appointTime;
+    }
+    public Appointment(long bookId,long studentId,Date appointTime,Book book){
+        this.bookId = bookId;
+        this.studentId = studentId;
+        this.appointTime = appointTime;
+        this.book = book;
+    }
     public long getBookId() {
         return bookId;
     }
@@ -46,5 +59,15 @@ public class Appointment {
 
     public void setBook(Book book) {
         this.book = book;
+    }
+
+    @Override
+    public String toString() {
+        return "Appointment{" +
+            "bookId=" + bookId +
+            ", studentId=" + studentId +
+            ", appointTime=" + appointTime +
+            ", book=" + book +
+            '}';
     }
 }

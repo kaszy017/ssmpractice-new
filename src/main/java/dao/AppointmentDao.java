@@ -9,7 +9,6 @@ import org.apache.ibatis.annotations.Param;
 public interface AppointmentDao {
     /**
      * 插入预约图书记录
-     *
      * @param bookId
      * @param studentId
      * @return 插入的行数
@@ -21,7 +20,7 @@ public interface AppointmentDao {
      *
      * @param bookId
      * @param studentId
-     * @return
+     * @return 图书实体
      */
     Appointment queryByKeyWithBook(@Param("bookId") long bookId, @Param("studentId") long studentId);
 

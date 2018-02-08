@@ -20,7 +20,7 @@ public class BookDaoTest extends BaseTest{
 
     @Test
     public void testQueryAll() throws Exception {
-        List<Book> books = bookDao.queryAll(0, 4);
+        List<Book> books = bookDao.queryAll(1, 3);
         for (Book book : books) {
             System.out.println(book);
         }
@@ -28,7 +28,7 @@ public class BookDaoTest extends BaseTest{
 
     @Test
     public void testReduceNumber() throws Exception {
-        long bookId = 1000;
+        long bookId = 1003;
         int update = bookDao.reduceNumber(bookId);
         System.out.println("update=" + update);
     }
